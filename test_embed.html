@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://cubiqdemo.eu.qlikcloud.com;">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>Qlik Development Tools</title>
+
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Qlik Development Resources</strong></li>
+        </ul>
+<!--
+        <ul>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#guides">Guides</a></li>
+            <li><a href="#contact" role="button">Contact</a></li>
+        </ul>
+	<iframe width="100%" height="100%" src="https://sway.cloud.microsoft/s/BHwFRnklr9HQ438x/embed" frameborder="0" marginheight="0" marginwidth="0" max-width="100%" sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts" scrolling="no" style="border: none; max-width: 100%; max-height: 100vh" allowfullscreen mozallowfullscreen msallowfullscreen webkitallowfullscreen></iframe>
+
+-->
+    </nav>
+    <main class="container">
+        <div class="grid">
+            <section>
+                <hgroup>
+                    <h2>Miscellaneous Qlik Development Tools</h2>
+                    <h3>Curated By <a href="mailto:phuoc.tranminh@afry.com">Phuoc Tran Minh</a></h3>
+                </hgroup>
+                <p>Bookmarklets (simply drag the link to your browser bookmarks to save&use) </p>
+                <ul id="tools">
+                    <li><a href="javascript:(function(){if(!document.getElementById('fountscript')){var founts=document.createElement('script');founts.src='https://fount.artequalswork.com/fount.js';founts.id='fountscript';document.body.appendChild(founts);}})();" target="_blank">Fount</a> - Enable/Disable Font Checking Mode, source and more info: <a href="https://fount.artequalswork.com/">artequalswork.com</a></li>
+                    <li><a href="javascript:(function(){window.location.assign(window.location.href + '/options/developer')})()" target="_blank">Qlik Dev Menu</a> - add <a href="https://community.qlik.com/t5/Design/Developer-menu-in-Qlik-Sense-client/ba-p/1471915">"Developer" option in context menu</a> to quickly check object id, type and other properties.</li>
+                    <li><a href="javascript:(function(){var d=window.location.hostname;window.open('https://'+d+(d.endsWith('qlikcloud.com')?'/console/content/apps':'/qmc/apps'));})();" target="_blank">QMC Apps</a> - Open QMC Apps of whatever Qlik server you're currently using in new window.</li>
+                    <li><a href="javascript:(function(){var url=window.location.href;if(url.endsWith('/')){url=url.substring(0,url.length-1);}var newWindow=window.open(url+'/identity/session2');newWindow.onload=function(){var style=document.createElement('style');style.innerHTML='header.qs-toolbar { background-color: #AAAAFF; }';newWindow.document.head.appendChild(style);};})();" target="_blank">Qlik New App Session</a> - Opens an alternate Qlik session that has independent selections for custom comparisons.</li>
+                </ul>
+				
+				Interested in creating your own bookmarklets? They can be created easily with prompt-gramming using ChatGPT, here is an example of how the last one was created using GPT4: <a href="https://chat.openai.com/share/9fb0a336-a301-4bbd-8343-285696dbb07d">ChatGPT dialog</a>
+            </section>
+        </div>
+    </main>
+	
+	<iframe src="https://cubiqdemo.eu.qlikcloud.com/single/?appid=d318dfca-9234-4f7a-8c4c-26ef3410c67d&obj=EnJmHyz&theme=sense&opt=ctxmenu,currsel&select=$::Year,2023&select=$::Period,5&select=$::ComparisonMode,Forecast&select=$::CurrencyMode,EUR&select=$::MeasureCode,sales&select=$::TimeMode,Period" style="border:none;width:100%;height:100%;"></iframe>
+    
+	<footer class="container">
+        <small><a href="#">This page is just a quick start</a> • <a href="#">Still very much in progress!</a> • <a href="mailto:phuoc.tranminh@afry.com">Send Feedback</a></small>
+    </footer>
+</body>
+</html>
